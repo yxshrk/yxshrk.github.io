@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <title>Travel Blog: {% block title %}{% endblock %}</title>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/"><span>Travel Blog</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session.user_id %}
+                    <ul class="navbar-nav mr-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/">Homepage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/AddBlog">Add Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contactus">Contact Us</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+      <main>
+      <div class="jumbotron"  style="background-image: url(https://image.freepik.com/free-photo/young-attractive-happy-woman-showing-peace-gesture-eiffel-tower-paris-france_158235-446.jpg);
+  background-repeat: no-repeat;background-size: cover;
+  margin-top:-200px;height:600px; overflow:hidden;">
+              <div class="text-block" style="position: absolute;bottom:500px;right: 300px;
+                background: hsla(205, 75%, 65%, 0.2);color: white;width: 60%;padding: 20px;">
+                  <h1 style="font-style:italic;">Travel the World Today!<h1>
+              </div>
+      </div>
+
+      <div class="container">
+          <div class="text-block" style="padding:15px;width:100%;background-color:white;opacity:0.9">
+              <h2>Top Travel Destinations of the World</h2>
+                  <p style="text-align:left;width:700px;margin-left:200px;">Travelling the world is a special experience. It allows us to learn about our beautiful planet and discover amazing destinations.
+              We get the chance to take in magnificent sights, try delicious food and learn about other cultures! Here are some of the top travel destinations you should know about</p>
+
+                  <ul>
+                      <div>
+                      <li>
+                          <img src="https://images.theconversation.com/files/228846/original/file-20180723-189310-1ymcybu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip" alt="Taj Mahal India" style="float:right;width:375px;height:250px;margin-right:150px;">
+                          <h3 style="text-align:left;">Taj Mahal</h3>
+                          <p style="text-align:left;width:700px;margin-left:20px;margin-right:500px;">The Taj Mahal is known the world over for its beautiful architecture, history and the tale of love that led to its creation.
+                      Located in the Indian city of Agra, the Taj Mahal was commissioned in 1632 by the Mughal emperor Shah Jahan as a testament of his love for his departed wife Mumtaz Mahal.
+                      Apart from housing her tomb, it also contains the tomb of Shah Jahan himself. The mausoleum, built with an ivory-white marble and precious stones, was designated as a UNESCO World Heritage Site in 1983.
+                      To this day it attracts 7 to 8 million visitors a year. </p>
+
+                      </li>
+                      </div>
+                      <div>
+                      <li>
+
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu" style="float:right;width:375px;height:250px;margin-right:150px;">
+                          <h3 style="text-align:left;">Machu Picchu</h3>
+                          <p style="text-align:left;width:750px;margin-left:20px;margin-right:600px;">Located in the Eastern Cordillera of southern Peru on a 7,970 ft mountain ridge, Machu Picchu is a 15th-century Inca citadel.
+                          It is the most familiar icon of Inca civilization, and is often mistaken for the ‘Lost City of the Incas’.
+                          Most archaeologists believe that it was constructed as an estate for the Inca emperor Pachacuti around the year 1450 and then abandoned a century later at the time of the Spanish conquest.
+                          Built with polished dry-stone walls, Machu Picchu was declared a Peruvian Historic Sanctuary in 1981 and a UNESCO World Heritage Site in 1983.
+                          </p>
+
+                      </li>
+                      </div>
+
+                      <li>
+                          <img src="https://w1nnersclub.com/wp-content/uploads/2017/06/great-barrier-reef-CORAL0316.jpg" alt="The Great Barrier Reef, Australia" style="float:right;width:375;height:250px;margin-right:150px;">
+                          <h3 style="text-align:left;">The Great Barrier Reef, Australia</h3>
+                          <p style="text-align:left;width:460px;margin-left:20px;margin-right:600px;">The Great Barrier Reef is one of the undisputed best vacation spots for anyone who wants the opportunity to glimpse one of the most incredible marvels of nature.
+                          The reef spans across 2,300 kilometers and is so huge that it can actually be spotted from outer space! Tourists will be able to enjoy the amazing sights of unique marine animals and plants, interacting with each other in perfect harmony.
+                          You can dive or snorkel in the area to really get up close and personal with the local flora and fauna.</p>
+                      </li>
+
+                      <li>
+                          <h3 style="text-align:left;">Amalfi Coast, Italy</h3>
+                          <img src="https://motosurfworldcup.com/wp-content/uploads/2021/03/holidayme_PicturesOfAmalfiCoast_Salerno_shutterstock_1558613126.jpg" alt="Amalfi Coast Italy" style="float:right;width:420;height:250px;margin-right:150px;">
+                          <p style="text-align:left;width:450px;margin-left:20px;margin-right:600px;">Amalfi Coast is a fantastic getaway for everyone. Whether you’re looking for some calm relaxation, you’re itching for some fresh seafood, or you desire something more adventurous, Amalfi Coast is one of the best vacation spots you can hope for.
+13 towns along the cliffside provide hiking trails and a sense of warm civilization, while beaches provide the white expanses of sand perfect for a picturesque lounge. Look over from a luxury hotel and marvel at the view – wide cliffs, green trees, and the deep blue sea.</p>
+                      </li>
+
+                      <li>
+
+                          <h3 style="text-align:left;">Blue Lagoon Iceland</h3>
+                          <img src="https://anglers.is/wp-content/uploads/2017/05/7.jpg" alt="Blue Lagoon Iceland" style="float:right;width:375px;height:250px;margin-right:100px;">
+                          <p style="text-align:left;width:500px;margin-left:20px;margin-right:650px;">If you’re a sucker for a good soak in a hot spring, the Blue Lagoon is one of the best places to travel.
+It’s a one-of-a-kind geothermal spa that sits right in the middle of a rather intimidating lava field.
+It might sound frightening, but when you see it, you’ll know why it’s such a great place to take a trip to.
+It may be a man-made lagoon, but it is home to silent, still white waters, and a lava flow nearby leads to nice, warm water that makes for a wonderful treat for your body.
+It’s full of minerals, silica, and other components that will enrich your body and even help some skin conditions.</p>
+                      </li>
+                  </ul>
+      </div>
+
+      </main>
+
+    </body>
+
+    <footer class="medium text-center text-muted" style="margin-top:15px;">
+            For more information on travel destinations you can visit this <a href="https://www.busytourist.com/best-vacation-spots-and-places-to-visit/">link</a>.
+    </footer>
+    </footer>
+</html>
